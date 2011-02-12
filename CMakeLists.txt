@@ -13,6 +13,9 @@ IF(Boost_FOUND)
   LINK_DIRECTORIES(${Boost_LIBRARY_DIRS})
 ENDIF(Boost_FOUND)
 
+#FIND_PACKAGE(GTest REQUIRED)
+# TODO: also add cmake detector for Google Mock
+
 ADD_EXECUTABLE(boost-test1 boost-test1.cpp)
 IF(UNIX)
   TARGET_LINK_LIBRARIES(boost-test1 ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
